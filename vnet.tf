@@ -1,6 +1,6 @@
-provider "azurerm" {
-  features {}
-}
+#provider "azurerm" {
+#  features {}
+#}
 
 #module "network" {
 #  source  = "iacdev.wpp.cloud/WPP-Lab/network/azurerm"
@@ -10,12 +10,12 @@ provider "azurerm" {
 #resource_group_name = azurerm_resource_group.example.name
 #}
 
-module "network" {
-  source  = "iacdev.wpp.cloud/WPP-Lab/network/azurerm"
-  version = "3.0.1"
-
-  resource_group_name = "VNetGaurav"
-}
+#module "network" {
+#  source  = "iacdev.wpp.cloud/WPP-Lab/network/azurerm"
+#  version = "3.0.1"
+#
+#  resource_group_name = "VNetGaurav"
+#}
 
 #resource "azurerm_resource_group" "example" {
 #  name     = "my-resources"
@@ -42,3 +42,13 @@ module "network" {
 #
 #  depends_on = [azurerm_resource_group.example]
 #}
+
+resource "azurerm_virtual_network" "vnet" {
+  name                = "${var.prefix}-G-vnet"
+  location            = azurerm_resource_group.myresourcegroup.location
+  address_space       = [var.address_space]
+  resource_group_name = azurerm_resource_group.myresourcegroup.name
+}
+
+
+
