@@ -6,7 +6,6 @@ module "network" {
   source  = "iacdev.wpp.cloud/WPP-Lab/network/azurerm"
   version = "3.0.1"
   # insert required variables here
-  name="Gaurav-VNet"
 resource_group_name = azurerm_resource_group.myresourcegroup.name
 
 }
