@@ -1,6 +1,13 @@
-provider "azurerm" {
-  features {}
+#provider "azurerm" {
+#  features {}
+#}
+
+module "network" {
+  source  = "iacdev.wpp.cloud/WPP-Lab/network/azurerm"
+  version = "3.0.1"
+  # insert required variables here
 }
+
 
 resource "azurerm_resource_group" "example" {
   name     = "my-resources"
