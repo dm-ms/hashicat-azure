@@ -43,7 +43,7 @@
 #  depends_on = [azurerm_resource_group.example]
 #}
 
-resource "azurerm_virtual_network" "vnet" {
+resource "azurerm_virtual_network" "Gvnet" {
   name                = "${var.prefix}-G-vnet"
   location            = azurerm_resource_group.myresourcegroup.location
   address_space       = [var.address_space]
