@@ -1,7 +1,7 @@
-#provider "azurerm" {
-#  features {}
-#}
-#
+provider "azurerm" {
+  features {}
+}
+
 #module "network" {
 #  source  = "iacdev.wpp.cloud/WPP-Lab/network/azurerm"
 #  version = "3.0.1"
